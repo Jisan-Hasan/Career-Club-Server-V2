@@ -75,15 +75,12 @@ const getAllPackages = async (
   };
 };
 
+const getSinglePackage = async (id: string): Promise<IPackage | null> => {
+  const result = await Package.findById(id);
+  return result;
+};
 
-//   const getSingleDepartment = async (
-//     id: string
-//   ): Promise<IAcademicDepartment | null> => {
-//     const result = await AcademicDepartment.findById(id).populate(
-//       'academicFaculty'
-//     );
-//     return result;
-//   };
+
 
 //   const deleteDepartment = async (
 //     id: string
@@ -92,4 +89,9 @@ const getAllPackages = async (
 //     return result;
 //   };
 
-export const PackageService = { createPackage, updatePackage, getAllPackages };
+export const PackageService = {
+  createPackage,
+  updatePackage,
+  getAllPackages,
+  getSinglePackage,
+};

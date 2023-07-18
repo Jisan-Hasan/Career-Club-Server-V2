@@ -17,25 +17,14 @@ router.patch(
   PackageController.updatePackage
 );
 
+router.get('/:id', PackageController.getSinglePackage);
+
 router.get('/', PackageController.getAllPackages);
-
-// router.post(
-//   '/create-department',
-//   validateRequest(
-//     AcademicDepartmentValidation.createAcademicDepartmentZodSchema
-//   ),
-//   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-//   AcademicDepartmentController.createDepartment
-// );
-
-// router.get('/:id', AcademicDepartmentController.getSingleDepartment);
 
 // router.delete(
 //   '/:id',
 //   auth(ENUM_USER_ROLE.SUPER_ADMIN),
 //   AcademicDepartmentController.deleteDepartment
 // );
-
-// router.get('/', AcademicDepartmentController.getAllDepartments);
 
 export const PackageRoutes = router;
