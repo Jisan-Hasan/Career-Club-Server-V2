@@ -21,6 +21,6 @@ router.patch(
 
 //   router.delete('/:id', PackageController.deletePackage);
 
-//   router.get('/', PackageController.getAllPackages);
+router.get('/', CategoryController.getAllCategories);
 
 export const CategoryRoutes = router;

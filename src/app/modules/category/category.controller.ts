@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
+import { paginationFields } from '../../../constants/pagination';
 import catchAsync from '../../../shared/catchAsync';
+import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
+import { categoryFilterableFields } from './category.constant';
 import { ICategory } from './category.interface';
 import { CategoryService } from './category.service';
 
@@ -29,23 +32,23 @@ const updateCategory = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-//   const getAllPackages = catchAsync(async (req: Request, res: Response) => {
-//     const filters = pick(req.query, packageFilterableFields);
-//     const paginationOptions = pick(req.query, paginationFields);
+const getAllCategories = catchAsync(async (req: Request, res: Response) => {
+  const filters = pick(req.query, categoryFilterableFields);
+  const paginationOptions = pick(req.query, paginationFields);
 
-//     const result = await PackageService.getAllPackages(
-//       filters,
-//       paginationOptions
-//     );
+  const result = await CategoryService.getAllCategories(
+    filters,
+    paginationOptions
+  );
 
-//     sendResponse<IPackage[]>(res, {
-//       statusCode: httpStatus.OK,
-//       success: true,
-//       message: 'Packages fetched successfully',
-//       meta: result.meta,
-//       data: result.data,
-//     });
-//   });
+  sendResponse<ICategory[]>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Categories fetched successfully',
+    meta: result.meta,
+    data: result.data,
+  });
+});
 
 //   const getSinglePackage = catchAsync(async (req: Request, res: Response) => {
 //     const { id } = req.params;
@@ -74,4 +77,5 @@ const updateCategory = catchAsync(async (req: Request, res: Response) => {
 export const CategoryController = {
   createCategory,
   updateCategory,
+  getAllCategories,
 };

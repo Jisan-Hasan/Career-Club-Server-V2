@@ -29,6 +29,11 @@
             "date": 1689678068400,
             "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-17-error.log",
             "hash": "d155bb1decdc14e7f8be5015738229e9cf63b49b912768145713ccb74be54bdb"
+        },
+        {
+            "date": 1689681704442,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-18-error.log",
+            "hash": "4ac431cf4ba894a6fddc0914d164fa72c377916902061d0db4730b4120c37274"
         }
     ],
     "hashType": "sha256"

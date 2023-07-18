@@ -25,8 +25,6 @@ const getAllPackages = async (
   filters: IPackageFilters,
   paginationOptions: IPaginationOptions
 ): Promise<IGenericResponse<IPackage[]>> => {
-  const { limit, page, skip, sortBy, sortOrder } =
-    paginationHelpers.calculatePagination(paginationOptions);
   const { searchTerm, ...filtersData } = filters;
 
   const andConditions = [];
@@ -34,10 +32,7 @@ const getAllPackages = async (
   if (searchTerm) {
     andConditions.push({
       $or: packageSearchableFields.map(field => ({
-        [field]: {
-          $regex: searchTerm,
-          $paginationOptions: 'i',
-        },
+        [field]: { $regex: searchTerm, $options: 'i' },
       })),
     });
   }
@@ -50,11 +45,14 @@ const getAllPackages = async (
     });
   }
 
-  const sortConditions: { [key: string]: SortOrder } = {};
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelpers.calculatePagination(paginationOptions);
 
+  const sortConditions: { [key: string]: SortOrder } = {};
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
+
   const whereConditions =
     andConditions.length > 0 ? { $and: andConditions } : {};
 

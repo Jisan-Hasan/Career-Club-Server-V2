@@ -1,4 +1,9 @@
-import { ICategory } from './category.interface';
+import { SortOrder } from 'mongoose';
+import { paginationHelpers } from '../../../helpers/paginationHelper';
+import { IGenericResponse } from '../../../interfaces/common';
+import { IPaginationOptions } from '../../../interfaces/pagination';
+import { categorySearchableFields } from './category.constant';
+import { ICategory, ICategoryFilters } from './category.interface';
 import { Category } from './category.model';
 
 const createCategory = async (
@@ -18,59 +23,57 @@ const updateCategory = async (
   return result;
 };
 
-//   const getAllPackages = async (
-//     filters: IPackageFilters,
-//     paginationOptions: IPaginationOptions
-//   ): Promise<IGenericResponse<IPackage[]>> => {
-//     const { limit, page, skip, sortBy, sortOrder } =
-//       paginationHelpers.calculatePagination(paginationOptions);
-//     const { searchTerm, ...filtersData } = filters;
+const getAllCategories = async (
+  filters: ICategoryFilters,
+  paginationOptions: IPaginationOptions
+): Promise<IGenericResponse<ICategory[]>> => {
+  const { searchTerm, ...filtersData } = filters;
 
-//     const andConditions = [];
+  const andConditions = [];
 
-//     if (searchTerm) {
-//       andConditions.push({
-//         $or: packageSearchableFields.map(field => ({
-//           [field]: {
-//             $regex: searchTerm,
-//             $paginationOptions: 'i',
-//           },
-//         })),
-//       });
-//     }
+  if (searchTerm) {
+    andConditions.push({
+      $or: categorySearchableFields.map(field => ({
+        [field]: { $regex: searchTerm, $options: 'i' },
+      })),
+    });
+  }
 
-//     if (Object.keys(filtersData).length) {
-//       andConditions.push({
-//         $and: Object.entries(filtersData).map(([field, value]) => ({
-//           [field]: value,
-//         })),
-//       });
-//     }
+  if (Object.keys(filtersData).length) {
+    andConditions.push({
+      $and: Object.entries(filtersData).map(([field, value]) => ({
+        [field]: value,
+      })),
+    });
+  }
 
-//     const sortConditions: { [key: string]: SortOrder } = {};
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelpers.calculatePagination(paginationOptions);
 
-//     if (sortBy && sortOrder) {
-//       sortConditions[sortBy] = sortOrder;
-//     }
-//     const whereConditions =
-//       andConditions.length > 0 ? { $and: andConditions } : {};
+  const sortConditions: { [key: string]: SortOrder } = {};
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder;
+  }
 
-//     const result = await Package.find(whereConditions)
-//       .sort(sortConditions)
-//       .skip(skip)
-//       .limit(limit);
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
 
-//     const total = await Package.countDocuments(whereConditions);
+  const result = await Category.find(whereConditions)
+    .sort(sortConditions)
+    .skip(skip)
+    .limit(limit);
 
-//     return {
-//       meta: {
-//         page,
-//         limit,
-//         total,
-//       },
-//       data: result,
-//     };
-//   };
+  const total = await Category.countDocuments(whereConditions);
+
+  return {
+    meta: {
+      page,
+      limit,
+      total,
+    },
+    data: result,
+  };
+};
 
 //   const getSinglePackage = async (id: string): Promise<IPackage | null> => {
 //     const result = await Package.findById(id);
@@ -85,4 +88,5 @@ const updateCategory = async (
 export const CategoryService = {
   createCategory,
   updateCategory,
+  getAllCategories,
 };
