@@ -12,12 +12,12 @@ router.post(
 );
 
 router.patch(
-    '/:id',
-    validateRequest(PackageValidation.updatePackageZodSchema),
-    PackageController.updatePackage
-)
+  '/:id',
+  validateRequest(PackageValidation.updatePackageZodSchema),
+  PackageController.updatePackage
+);
 
-
+router.get('/', PackageController.getAllPackages);
 
 // router.post(
 //   '/create-department',
@@ -29,8 +29,6 @@ router.patch(
 // );
 
 // router.get('/:id', AcademicDepartmentController.getSingleDepartment);
-
-
 
 // router.delete(
 //   '/:id',
