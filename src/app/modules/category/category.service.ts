@@ -1,12 +1,14 @@
+import { ICategory } from './category.interface';
+import { Category } from './category.model';
+
+const createCategory = async (
+  payload: ICategory
+): Promise<ICategory | null> => {
+  const result = await Category.create(payload);
+  return result;
+};
 
 
-
-
-// const createPackage = async (payload: IPackage): Promise<IPackage | null> => {
-//     const result = await Package.create(payload);
-//     return result;
-//   };
-  
 //   const updatePackage = async (
 //     id: string,
 //     payload: Partial<IPackage>
@@ -16,7 +18,7 @@
 //     });
 //     return result;
 //   };
-  
+
 //   const getAllPackages = async (
 //     filters: IPackageFilters,
 //     paginationOptions: IPaginationOptions
@@ -24,9 +26,9 @@
 //     const { limit, page, skip, sortBy, sortOrder } =
 //       paginationHelpers.calculatePagination(paginationOptions);
 //     const { searchTerm, ...filtersData } = filters;
-  
+
 //     const andConditions = [];
-  
+
 //     if (searchTerm) {
 //       andConditions.push({
 //         $or: packageSearchableFields.map(field => ({
@@ -37,7 +39,7 @@
 //         })),
 //       });
 //     }
-  
+
 //     if (Object.keys(filtersData).length) {
 //       andConditions.push({
 //         $and: Object.entries(filtersData).map(([field, value]) => ({
@@ -45,22 +47,22 @@
 //         })),
 //       });
 //     }
-  
+
 //     const sortConditions: { [key: string]: SortOrder } = {};
-  
+
 //     if (sortBy && sortOrder) {
 //       sortConditions[sortBy] = sortOrder;
 //     }
 //     const whereConditions =
 //       andConditions.length > 0 ? { $and: andConditions } : {};
-  
+
 //     const result = await Package.find(whereConditions)
 //       .sort(sortConditions)
 //       .skip(skip)
 //       .limit(limit);
-  
+
 //     const total = await Package.countDocuments(whereConditions);
-  
+
 //     return {
 //       meta: {
 //         page,
@@ -70,15 +72,17 @@
 //       data: result,
 //     };
 //   };
-  
+
 //   const getSinglePackage = async (id: string): Promise<IPackage | null> => {
 //     const result = await Package.findById(id);
 //     return result;
 //   };
-  
+
 //   const deletePackage = async (id: string): Promise<IPackage | null> => {
 //     const result = await Package.findByIdAndDelete(id);
 //     return result;
 //   };
 
-export const CategoryService = {};
+export const CategoryService = {
+  createCategory,
+};

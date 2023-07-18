@@ -40,3 +40,17 @@
   label: 'Success!',
   timestamp: '2023-07-18T10:52:12.808Z'
 }
+{
+  message: '🗄️ Database connected successfully.',
+  level: 'info',
+  service: 'user-service',
+  label: 'Success!',
+  timestamp: '2023-07-18T10:54:44.417Z'
+}
+{
+  message: 'App is listening on port 5000',
+  level: 'info',
+  service: 'user-service',
+  label: 'Success!',
+  timestamp: '2023-07-18T10:54:44.423Z'
+}

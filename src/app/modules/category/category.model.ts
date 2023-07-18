@@ -13,7 +13,7 @@ const CategorySchema = new Schema<ICategory, CategoryModel>(
   }
 );
 
-export const Package = model<ICategory, CategoryModel>(
+export const Category = model<ICategory, CategoryModel>(
   'Category',
   CategorySchema
 );
