@@ -8,16 +8,15 @@ const createCategory = async (
   return result;
 };
 
-
-//   const updatePackage = async (
-//     id: string,
-//     payload: Partial<IPackage>
-//   ): Promise<IPackage | null> => {
-//     const result = await Package.findOneAndUpdate({ _id: id }, payload, {
-//       new: true,
-//     });
-//     return result;
-//   };
+const updateCategory = async (
+  id: string,
+  payload: Partial<ICategory>
+): Promise<ICategory | null> => {
+  const result = await Category.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
+  return result;
+};
 
 //   const getAllPackages = async (
 //     filters: IPackageFilters,
@@ -85,4 +84,5 @@ const createCategory = async (
 
 export const CategoryService = {
   createCategory,
+  updateCategory,
 };

@@ -11,12 +11,11 @@ router.post(
   CategoryController.createCategory
 );
 
-
-//   router.patch(
-//     '/:id',
-//     validateRequest(PackageValidation.updatePackageZodSchema),
-//     PackageController.updatePackage
-//   );
+router.patch(
+  '/:id',
+  validateRequest(CategoryValidation.updateCategoryZodSchema),
+  CategoryController.updateCategory
+);
 
 //   router.get('/:id', PackageController.getSinglePackage);
 

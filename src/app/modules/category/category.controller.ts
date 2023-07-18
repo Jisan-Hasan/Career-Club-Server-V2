@@ -17,19 +17,17 @@ const createCategory = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updateCategory = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await CategoryService.updateCategory(id, req.body);
 
-
-//   const updatePackage = catchAsync(async (req: Request, res: Response) => {
-//     const { id } = req.params;
-//     const result = await PackageService.updatePackage(id, req.body);
-
-//     sendResponse<IPackage>(res, {
-//       statusCode: httpStatus.OK,
-//       success: true,
-//       message: 'Package Updated Successfully',
-//       data: result,
-//     });
-//   });
+  sendResponse<ICategory>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Category Updated Successfully',
+    data: result,
+  });
+});
 
 //   const getAllPackages = catchAsync(async (req: Request, res: Response) => {
 //     const filters = pick(req.query, packageFilterableFields);
@@ -75,4 +73,5 @@ const createCategory = catchAsync(async (req: Request, res: Response) => {
 
 export const CategoryController = {
   createCategory,
+  updateCategory,
 };
