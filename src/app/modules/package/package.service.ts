@@ -6,14 +6,15 @@ const createPackage = async (payload: IPackage): Promise<IPackage | null> => {
   return result;
 };
 
-// const createDepartment = async (
-//     payload: IAcademicDepartment
-//   ): Promise<IAcademicDepartment | null> => {
-//     const result = (await AcademicDepartment.create(payload)).populate(
-//       'academicFaculty'
-//     );
-//     return result;
-//   };
+const updatePackage = async (
+  id: string,
+  payload: Partial<IPackage>
+): Promise<IPackage | null> => {
+  const result = await Package.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  });
+  return result;
+};
 
 //   const getAllDepartments = async (
 //     filters: IAcademicDepartmentFilters,
@@ -80,20 +81,6 @@ const createPackage = async (payload: IPackage): Promise<IPackage | null> => {
 //     return result;
 //   };
 
-//   const updateDepartment = async (
-//     id: string,
-//     payload: Partial<IAcademicDepartment>
-//   ): Promise<IAcademicDepartment | null> => {
-//     const result = await AcademicDepartment.findOneAndUpdate(
-//       { _id: id },
-//       payload,
-//       {
-//         new: true,
-//       }
-//     ).populate('academicFaculty');
-//     return result;
-//   };
-
 //   const deleteDepartment = async (
 //     id: string
 //   ): Promise<IAcademicDepartment | null> => {
@@ -101,4 +88,4 @@ const createPackage = async (payload: IPackage): Promise<IPackage | null> => {
 //     return result;
 //   };
 
-export const PackageService = { createPackage };
+export const PackageService = { createPackage, updatePackage };

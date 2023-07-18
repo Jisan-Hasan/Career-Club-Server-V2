@@ -17,6 +17,20 @@ const createPackage = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const updatePackage = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await PackageService.updatePackage(id, req.body);
+
+  sendResponse<IPackage>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Package Updated Successfully',
+    data: result,
+  });
+});
+
+
+
 // const createDepartment = catchAsync(async (req: Request, res: Response) => {
 //   const { ...academicDepartmentData } = req.body;
 //   const result = await AcademicDepartmentService.createDepartment(
@@ -61,18 +75,6 @@ const createPackage = catchAsync(async (req: Request, res: Response) => {
 //   });
 // });
 
-// const updateDepartment = catchAsync(async (req: Request, res: Response) => {
-//   const { id } = req.params;
-//   const result = await AcademicDepartmentService.updateDepartment(id, req.body);
-
-//   sendResponse<IAcademicDepartment>(res, {
-//     statusCode: httpStatus.OK,
-//     success: true,
-//     message: 'Academic Department updated successfully',
-//     data: result,
-//   });
-// });
-
 // const deleteDepartment = catchAsync(async (req: Request, res: Response) => {
 //   const { id } = req.params;
 //   const result = await AcademicDepartmentService.deleteDepartment(id);
@@ -85,4 +87,4 @@ const createPackage = catchAsync(async (req: Request, res: Response) => {
 //   });
 // });
 
-export const PackageController = { createPackage };
+export const PackageController = { createPackage, updatePackage };

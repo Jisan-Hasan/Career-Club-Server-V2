@@ -11,6 +11,14 @@ router.post(
   PackageController.createPackage
 );
 
+router.patch(
+    '/:id',
+    validateRequest(PackageValidation.updatePackageZodSchema),
+    PackageController.updatePackage
+)
+
+
+
 // router.post(
 //   '/create-department',
 //   validateRequest(
@@ -22,14 +30,7 @@ router.post(
 
 // router.get('/:id', AcademicDepartmentController.getSingleDepartment);
 
-// router.patch(
-//   '/:id',
-//   validateRequest(
-//     AcademicDepartmentValidation.updateAcademicDepartmentZodSchema
-//   ),
-//   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-//   AcademicDepartmentController.updateDepartment
-// );
+
 
 // router.delete(
 //   '/:id',
