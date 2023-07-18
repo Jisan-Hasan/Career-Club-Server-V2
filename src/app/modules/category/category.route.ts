@@ -17,7 +17,7 @@ router.patch(
   CategoryController.updateCategory
 );
 
-//   router.get('/:id', PackageController.getSinglePackage);
+  router.get('/:id', CategoryController.getSingleCategory);
 
 //   router.delete('/:id', PackageController.deletePackage);
 

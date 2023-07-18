@@ -50,17 +50,17 @@ const getAllCategories = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-//   const getSinglePackage = catchAsync(async (req: Request, res: Response) => {
-//     const { id } = req.params;
-//     const result = await PackageService.getSinglePackage(id);
+const getSingleCategory = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await CategoryService.getSingleCategory(id);
 
-//     sendResponse<IPackage>(res, {
-//       statusCode: httpStatus.OK,
-//       success: true,
-//       message: 'Package retrieved successfully',
-//       data: result,
-//     });
-//   });
+  sendResponse<ICategory>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Category retrieved successfully',
+    data: result,
+  });
+});
 
 //   const deletePackage = catchAsync(async (req: Request, res: Response) => {
 //     const { id } = req.params;
@@ -78,4 +78,5 @@ export const CategoryController = {
   createCategory,
   updateCategory,
   getAllCategories,
+  getSingleCategory,
 };
