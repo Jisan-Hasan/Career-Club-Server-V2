@@ -62,21 +62,22 @@ const getSingleCategory = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-//   const deletePackage = catchAsync(async (req: Request, res: Response) => {
-//     const { id } = req.params;
-//     const result = await PackageService.deletePackage(id);
+const deleteCategory = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await CategoryService.deleteCategory(id);
 
-//     sendResponse<IPackage>(res, {
-//       statusCode: httpStatus.OK,
-//       success: true,
-//       message: 'Package deleted successfully',
-//       data: result,
-//     });
-//   });
+  sendResponse<ICategory>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Category deleted successfully',
+    data: result,
+  });
+});
 
 export const CategoryController = {
   createCategory,
   updateCategory,
   getAllCategories,
   getSingleCategory,
+  deleteCategory,
 };

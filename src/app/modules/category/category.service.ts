@@ -75,19 +75,20 @@ const getAllCategories = async (
   };
 };
 
-  const getSingleCategory = async (id: string): Promise<ICategory | null> => {
-    const result = await Category.findById(id);
-    return result;
-  };
+const getSingleCategory = async (id: string): Promise<ICategory | null> => {
+  const result = await Category.findById(id);
+  return result;
+};
 
-//   const deletePackage = async (id: string): Promise<IPackage | null> => {
-//     const result = await Package.findByIdAndDelete(id);
-//     return result;
-//   };
+const deleteCategory = async (id: string): Promise<ICategory | null> => {
+  const result = await Category.findByIdAndDelete(id);
+  return result;
+};
 
 export const CategoryService = {
   createCategory,
   updateCategory,
   getAllCategories,
-  getSingleCategory
+  getSingleCategory,
+  deleteCategory,
 };
