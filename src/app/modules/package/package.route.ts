@@ -19,12 +19,9 @@ router.patch(
 
 router.get('/:id', PackageController.getSinglePackage);
 
+router.delete('/:id', PackageController.deletePackage);
+
 router.get('/', PackageController.getAllPackages);
 
-// router.delete(
-//   '/:id',
-//   auth(ENUM_USER_ROLE.SUPER_ADMIN),
-//   AcademicDepartmentController.deleteDepartment
-// );
 
 export const PackageRoutes = router;

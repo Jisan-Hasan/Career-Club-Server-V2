@@ -80,18 +80,15 @@ const getSinglePackage = async (id: string): Promise<IPackage | null> => {
   return result;
 };
 
-
-
-//   const deleteDepartment = async (
-//     id: string
-//   ): Promise<IAcademicDepartment | null> => {
-//     const result = await AcademicDepartment.findByIdAndDelete(id);
-//     return result;
-//   };
+const deletePackage = async (id: string): Promise<IPackage | null> => {
+  const result = await Package.findByIdAndDelete(id);
+  return result;
+};
 
 export const PackageService = {
   createPackage,
   updatePackage,
   getAllPackages,
   getSinglePackage,
+  deletePackage,
 };

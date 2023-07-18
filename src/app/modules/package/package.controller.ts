@@ -62,23 +62,22 @@ const getSinglePackage = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const deletePackage = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await PackageService.deletePackage(id);
 
-
-// const deleteDepartment = catchAsync(async (req: Request, res: Response) => {
-//   const { id } = req.params;
-//   const result = await AcademicDepartmentService.deleteDepartment(id);
-
-//   sendResponse<IAcademicDepartment>(res, {
-//     statusCode: httpStatus.OK,
-//     success: true,
-//     message: 'Academic Department deleted successfully',
-//     data: result,
-//   });
-// });
+  sendResponse<IPackage>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Package deleted successfully',
+    data: result,
+  });
+});
 
 export const PackageController = {
   createPackage,
   updatePackage,
   getAllPackages,
   getSinglePackage,
+  deletePackage,
 };
