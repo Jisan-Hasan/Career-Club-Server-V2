@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 2
+    },
+    "auditLog": "I:\\Advance Development\\career-club-server\\logs\\winston\\success\\.1a6eb1cec29637e3384de103b806c381cd4e8c27-audit.json",
+    "files": [
+        {
+            "date": 1689661324600,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\success\\CC-2023-07-18-12-success.log",
+            "hash": "d93ff53c9b6441f9648f16df951c3c50bfc9664d75d1a0695090c0ae1e764c4b"
+        },
+        {
+            "date": 1689664951552,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\success\\CC-2023-07-18-13-success.log",
+            "hash": "ae4215cb8b6f0c7b0baac3326edbf9c1d68694df6e38b4afe402d6bbaca0fe3c"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,14 @@
+node_modules
+.env
+
+auth
+academicDepartment
+academicFaculty
+academicSemester
+admin
+faculty
+managementDepartment
+student
+user
+constants
+enums
