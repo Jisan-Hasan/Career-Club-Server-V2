@@ -12,10 +12,12 @@ router.post(
 );
 
 router.patch(
-    '/:id',
-    validateRequest(JobValidation.updateJobZodValidation),
-    JobController.updateJob
-  );
+  '/:id',
+  validateRequest(JobValidation.updateJobZodValidation),
+  JobController.updateJob
+);
+
+router.get('/', JobController.getAllJobs);
 
 /* 
 
