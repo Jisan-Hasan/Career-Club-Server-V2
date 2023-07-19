@@ -11,4 +11,6 @@ router.post(
   PaymentController.createPayment
 );
 
+router.get('/', PaymentController.getAllPayments);
+
 export const PaymentRoutes = router;
