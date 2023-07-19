@@ -61,21 +61,22 @@ const getSingleJob = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-/* 
-
-
-const deletePackage = catchAsync(async (req: Request, res: Response) => {
+const deleteJob = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
-  const result = await PackageService.deletePackage(id);
+  const result = await JobService.deleteJob(id);
 
-  sendResponse<IPackage>(res, {
+  sendResponse<IJob>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Package deleted successfully',
+    message: 'Job deleted successfully',
     data: result,
   });
 });
 
-*/
-
-export const JobController = { createJob, updateJob, getAllJobs, getSingleJob };
+export const JobController = {
+  createJob,
+  updateJob,
+  getAllJobs,
+  getSingleJob,
+  deleteJob,
+};

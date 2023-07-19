@@ -19,11 +19,12 @@ router.patch(
 
 router.get('/:id', JobController.getSingleJob);
 
+router.delete('/:id', JobController.deleteJob);
+
 router.get('/', JobController.getAllJobs);
 /* 
 
 
-router.delete('/:id', PackageController.deletePackage);
 
 */
 

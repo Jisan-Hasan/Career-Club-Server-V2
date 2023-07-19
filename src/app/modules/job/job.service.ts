@@ -79,14 +79,16 @@ const getSingleJob = async (id: string): Promise<IJob | null> => {
   return result;
 };
 
-/* 
-
-
-const deletePackage = async (id: string): Promise<IPackage | null> => {
-  const result = await Package.findByIdAndDelete(id);
+const deleteJob = async (id: string): Promise<IJob | null> => {
+  const result = await Job.findByIdAndDelete(id).populate('category');
   return result;
 };
 
-*/
 
-export const JobService = { createJob, updateJob, getAllJobs, getSingleJob };
+export const JobService = {
+  createJob,
+  updateJob,
+  getAllJobs,
+  getSingleJob,
+  deleteJob,
+};
