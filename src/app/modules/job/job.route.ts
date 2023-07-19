@@ -22,10 +22,6 @@ router.get('/:id', JobController.getSingleJob);
 router.delete('/:id', JobController.deleteJob);
 
 router.get('/', JobController.getAllJobs);
-/* 
 
-
-
-*/
 
 export const JobRoutes = router;
