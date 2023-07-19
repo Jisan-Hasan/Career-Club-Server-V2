@@ -13,7 +13,7 @@ const JobSchema = new Schema<IJob, JobModel>(
     experience: { type: String, required: true },
     description: { type: String, required: true },
     employer_email: { type: String, required: true },
-    isApproved: { type: Boolean, required: true },
+    isApproved: { type: Boolean, required: true, default: false },
   },
   {
     timestamps: true,
