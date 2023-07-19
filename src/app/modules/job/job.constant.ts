@@ -10,11 +10,6 @@ export const jobDurations: IJobDuration[] = [
 
 export const jobTypes: IJobType[] = ['Hybrid', 'On Site', 'Remote'];
 
-
-
 export const jobSearchableFields = ['title'];
 
-export const jobFilterableFields = [
-  'searchTerm',
-  'title','duration','type'
-];
+export const jobFilterableFields = ['searchTerm', 'title', 'duration', 'type'];

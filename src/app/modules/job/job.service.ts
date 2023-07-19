@@ -84,7 +84,6 @@ const deleteJob = async (id: string): Promise<IJob | null> => {
   return result;
 };
 
-
 export const JobService = {
   createJob,
   updateJob,
