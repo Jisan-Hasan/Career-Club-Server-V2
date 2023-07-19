@@ -17,16 +17,13 @@ router.patch(
   JobController.updateJob
 );
 
-router.get('/', JobController.getAllJobs);
+router.get('/:id', JobController.getSingleJob);
 
+router.get('/', JobController.getAllJobs);
 /* 
 
 
-router.get('/:id', PackageController.getSinglePackage);
-
 router.delete('/:id', PackageController.deletePackage);
-
-router.get('/', PackageController.getAllPackages);
 
 */
 

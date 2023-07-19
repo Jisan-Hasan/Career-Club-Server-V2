@@ -22,63 +22,65 @@ const updateJob = async (
 };
 
 const getAllJobs = async (
-    filters: IJobFilters,
-    paginationOptions: IPaginationOptions
-  ): Promise<IGenericResponse<IJob[]>> => {
-    const { searchTerm, ...filtersData } = filters;
-  
-    const andConditions = [];
-  
-    if (searchTerm) {
-      andConditions.push({
-        $or: jobSearchableFields.map(field => ({
-          [field]: { $regex: searchTerm, $options: 'i' },
-        })),
-      });
-    }
-  
-    if (Object.keys(filtersData).length) {
-      andConditions.push({
-        $and: Object.entries(filtersData).map(([field, value]) => ({
-          [field]: value,
-        })),
-      });
-    }
-  
-    const { page, limit, skip, sortBy, sortOrder } =
-      paginationHelpers.calculatePagination(paginationOptions);
-  
-    const sortConditions: { [key: string]: SortOrder } = {};
-    if (sortBy && sortOrder) {
-      sortConditions[sortBy] = sortOrder;
-    }
-  
-    const whereConditions =
-      andConditions.length > 0 ? { $and: andConditions } : {};
-  
-    const result = await Job.find(whereConditions).populate('category')
-      .sort(sortConditions)
-      .skip(skip)
-      .limit(limit);
-  
-    const total = await Job.countDocuments(whereConditions);
-  
-    return {
-      meta: {
-        page,
-        limit,
-        total,
-      },
-      data: result,
-    };
+  filters: IJobFilters,
+  paginationOptions: IPaginationOptions
+): Promise<IGenericResponse<IJob[]>> => {
+  const { searchTerm, ...filtersData } = filters;
+
+  const andConditions = [];
+
+  if (searchTerm) {
+    andConditions.push({
+      $or: jobSearchableFields.map(field => ({
+        [field]: { $regex: searchTerm, $options: 'i' },
+      })),
+    });
+  }
+
+  if (Object.keys(filtersData).length) {
+    andConditions.push({
+      $and: Object.entries(filtersData).map(([field, value]) => ({
+        [field]: value,
+      })),
+    });
+  }
+
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelpers.calculatePagination(paginationOptions);
+
+  const sortConditions: { [key: string]: SortOrder } = {};
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder;
+  }
+
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+
+  const result = await Job.find(whereConditions)
+    .populate('category')
+    .sort(sortConditions)
+    .skip(skip)
+    .limit(limit);
+
+  const total = await Job.countDocuments(whereConditions);
+
+  return {
+    meta: {
+      page,
+      limit,
+      total,
+    },
+    data: result,
   };
+};
+
+const getSingleJob = async (id: string): Promise<IJob | null> => {
+  const result = await Job.findById(id).populate('category');
+  return result;
+};
 
 /* 
 
-const getSinglePackage = async (id: string): Promise<IPackage | null> => {
-  const result = await Package.findById(id);
-  return result;
-};
 
 const deletePackage = async (id: string): Promise<IPackage | null> => {
   const result = await Package.findByIdAndDelete(id);
@@ -87,4 +89,4 @@ const deletePackage = async (id: string): Promise<IPackage | null> => {
 
 */
 
-export const JobService = { createJob ,updateJob,getAllJobs};
+export const JobService = { createJob, updateJob, getAllJobs, getSingleJob };
