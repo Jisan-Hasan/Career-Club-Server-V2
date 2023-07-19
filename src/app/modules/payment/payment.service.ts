@@ -64,13 +64,13 @@ const getAllPayments = async (
   };
 };
 
-/* 
-
 const getSinglePayment = async (id: string): Promise<IPayment | null> => {
-  const result = await Payment.findById(id).populate('category');
+  const result = await Payment.findById(id).populate('package');
   return result;
 };
 
-*/
-
-export const PaymentService = { createPayment,getAllPayments };
+export const PaymentService = {
+  createPayment,
+  getAllPayments,
+  getSinglePayment,
+};

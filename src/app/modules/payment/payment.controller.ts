@@ -38,20 +38,20 @@ const getAllPayments = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-/* 
-
-
-const getSingleJob = catchAsync(async (req: Request, res: Response) => {
+const getSinglePayment = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
-  const result = await Paymentservice.getSingleJob(id);
+  const result = await PaymentService.getSinglePayment(id);
 
-  sendResponse<IJob>(res, {
+  sendResponse<IPayment>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Job retrieved successfully',
+    message: 'Payment retrieved successfully',
     data: result,
   });
 });
-*/
 
-export const PaymentController = { createPayment, getAllPayments };
+export const PaymentController = {
+  createPayment,
+  getAllPayments,
+  getSinglePayment,
+};
