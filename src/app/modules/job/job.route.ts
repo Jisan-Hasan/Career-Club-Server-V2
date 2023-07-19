@@ -11,4 +11,21 @@ router.post(
   JobController.createJob
 );
 
+router.patch(
+    '/:id',
+    validateRequest(JobValidation.updateJobZodValidation),
+    JobController.updateJob
+  );
+
+/* 
+
+
+router.get('/:id', PackageController.getSinglePackage);
+
+router.delete('/:id', PackageController.deletePackage);
+
+router.get('/', PackageController.getAllPackages);
+
+*/
+
 export const JobRoutes = router;

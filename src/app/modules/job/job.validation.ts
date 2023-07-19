@@ -33,7 +33,6 @@ const updateJobZodValidation = z.object({
       experience: z.string().optional(),
       description: z.string().optional(),
       employer_email: z.string().email().optional(),
-      isApproved: z.boolean().optional(),
     })
     .strict(),
 });
