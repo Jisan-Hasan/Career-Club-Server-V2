@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
 import httpStatus from 'http-status';
+import { paginationFields } from '../../../constants/pagination';
 import catchAsync from '../../../shared/catchAsync';
+import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
+import { applicationFilterableFields } from './application.constant';
 import { IApplication } from './application.interface';
 import { ApplicationService } from './application.service';
 
@@ -17,37 +20,28 @@ const createApplication = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-/* 
-
-
-const updateJob = catchAsync(async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const updatedData = req.body;
-  updatedData.isApproved = false;
-  const result = await JobService.updateJob(id, updatedData);
-
-  sendResponse<IJob>(res, {
-    statusCode: httpStatus.OK,
-    success: true,
-    message: 'Job Updated Successfully',
-    data: result,
-  });
-});
-
-const getAllJobs = catchAsync(async (req: Request, res: Response) => {
-  const filters = pick(req.query, jobFilterableFields);
+const getAllApplications = catchAsync(async (req: Request, res: Response) => {
+  const filters = pick(req.query, applicationFilterableFields);
   const paginationOptions = pick(req.query, paginationFields);
 
-  const result = await JobService.getAllJobs(filters, paginationOptions);
+  const result = await ApplicationService.getAllApplications(
+    filters,
+    paginationOptions
+  );
 
-  sendResponse<IJob[]>(res, {
+  sendResponse<IApplication[]>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Jobs fetched successfully',
+    message: 'Applications fetched successfully',
     meta: result.meta,
     data: result.data,
   });
 });
+
+/* 
+
+
+
 
 const getSingleJob = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
@@ -75,4 +69,5 @@ const deleteJob = catchAsync(async (req: Request, res: Response) => {
  */
 export const ApplicationController = {
   createApplication,
+  getAllApplications,
 };

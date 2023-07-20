@@ -11,20 +11,13 @@ router.post(
   ApplicationController.createApplication
 );
 
+router.get('/', ApplicationController.getAllApplications);
 /* 
-
-
-router.patch(
-  '/:id',
-  validateRequest(JobValidation.updateJobZodValidation),
-  JobController.updateJob
-);
 
 router.get('/:id', JobController.getSingleJob);
 
 router.delete('/:id', JobController.deleteJob);
 
-router.get('/', JobController.getAllJobs); 
 */
 
 export const ApplicationRoutes = router;
