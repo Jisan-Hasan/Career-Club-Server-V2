@@ -11,10 +11,12 @@ router.post(
   ApplicationController.createApplication
 );
 
+router.get('/:id', ApplicationController.getSingleApplication);
+
 router.get('/', ApplicationController.getAllApplications);
+
 /* 
 
-router.get('/:id', JobController.getSingleJob);
 
 router.delete('/:id', JobController.deleteJob);
 

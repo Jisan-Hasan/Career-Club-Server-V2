@@ -66,13 +66,16 @@ const getAllApplications = async (
   };
 };
 
+const getSingleApplication = async (
+  id: string
+): Promise<IApplication | null> => {
+  const result = await Application.findById(id).populate('job');
+  return result;
+};
+
 /* 
   
-  const getSingleJob = async (id: string): Promise<IJob | null> => {
-    const result = await Job.findById(id).populate('category');
-    return result;
-  };
-  
+
   const deleteJob = async (id: string): Promise<IJob | null> => {
     const result = await Job.findByIdAndDelete(id).populate('category');
     return result;
@@ -81,4 +84,5 @@ const getAllApplications = async (
 export const ApplicationService = {
   createApplication,
   getAllApplications,
+  getSingleApplication,
 };

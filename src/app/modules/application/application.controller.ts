@@ -38,22 +38,19 @@ const getAllApplications = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-/* 
-
-
-
-
-const getSingleJob = catchAsync(async (req: Request, res: Response) => {
+const getSingleApplication = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
-  const result = await JobService.getSingleJob(id);
+  const result = await ApplicationService.getSingleApplication(id);
 
-  sendResponse<IJob>(res, {
+  sendResponse<IApplication>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Job retrieved successfully',
+    message: 'Application retrieved successfully',
     data: result,
   });
 });
+
+/* 
 
 const deleteJob = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
@@ -70,4 +67,5 @@ const deleteJob = catchAsync(async (req: Request, res: Response) => {
 export const ApplicationController = {
   createApplication,
   getAllApplications,
+  getSingleApplication,
 };
