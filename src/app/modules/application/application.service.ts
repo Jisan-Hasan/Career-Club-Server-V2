@@ -73,16 +73,14 @@ const getSingleApplication = async (
   return result;
 };
 
-/* 
-  
+const deleteApplication = async (id: string): Promise<IApplication | null> => {
+  const result = await Application.findByIdAndDelete(id).populate('job');
+  return result;
+};
 
-  const deleteJob = async (id: string): Promise<IJob | null> => {
-    const result = await Job.findByIdAndDelete(id).populate('category');
-    return result;
-  };
-   */
 export const ApplicationService = {
   createApplication,
   getAllApplications,
   getSingleApplication,
+  deleteApplication,
 };

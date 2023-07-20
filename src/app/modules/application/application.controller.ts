@@ -50,22 +50,21 @@ const getSingleApplication = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-/* 
-
-const deleteJob = catchAsync(async (req: Request, res: Response) => {
+const deleteApplication = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
-  const result = await JobService.deleteJob(id);
+  const result = await ApplicationService.deleteApplication(id);
 
-  sendResponse<IJob>(res, {
+  sendResponse<IApplication>(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'Job deleted successfully',
+    message: 'Application deleted successfully',
     data: result,
   });
 });
- */
+
 export const ApplicationController = {
   createApplication,
   getAllApplications,
   getSingleApplication,
+  deleteApplication,
 };

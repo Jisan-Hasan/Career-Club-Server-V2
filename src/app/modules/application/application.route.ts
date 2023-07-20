@@ -13,13 +13,8 @@ router.post(
 
 router.get('/:id', ApplicationController.getSingleApplication);
 
+router.delete('/:id', ApplicationController.deleteApplication);
+
 router.get('/', ApplicationController.getAllApplications);
-
-/* 
-
-
-router.delete('/:id', JobController.deleteJob);
-
-*/
 
 export const ApplicationRoutes = router;
