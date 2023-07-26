@@ -1,17 +1,6 @@
 import { z } from 'zod';
 import { gender } from './jobSeeker.constant';
 
-const createJobSeekerZodSchema = z.object({
-  body: z.object({
-    name: z.object({
-      firstName: z.string({ required_error: 'First Name is required' }),
-      middleName: z.string().optional(),
-      lastName: z.string().optional(),
-    }),
-    email: z.string({ required_error: 'Email is required' }).email(),
-  }),
-});
-
 const updateJobSeekerZodSchema = z.object({
   body: z.object({
     name: z
@@ -44,6 +33,5 @@ const updateJobSeekerZodSchema = z.object({
 });
 
 export const JobSeekerValidation = {
-  createJobSeekerZodSchema,
   updateJobSeekerZodSchema,
 };
