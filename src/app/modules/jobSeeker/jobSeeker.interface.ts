@@ -1,7 +1,7 @@
 import { Model } from 'mongoose';
 
 export type UserName = {
-  firstName: string;
+  firstName?: string;
   middleName?: string;
   lastName?: string;
 };
@@ -14,20 +14,20 @@ export type SocialMedia = {
 };
 
 export type IJobSeeker = {
-  name: UserName;
+  name?: UserName;
   email: string;
-  gender: 'male' | 'female';
-  bio: string;
-  presentAddress: string;
-  permanentAddress: string;
-  institute: string;
-  cgpa: number;
-  contactNo: string;
+  gender?: 'male' | 'female';
+  bio?: string;
+  presentAddress?: string;
+  permanentAddress?: string;
+  institute?: string;
+  cgpa?: number;
+  contactNo?: string;
   emergencyContactNo?: string;
   socialMediaLink?: SocialMedia;
   resume?: string;
   profileImage?: string;
-  skills: string[];
+  skills?: string[];
 };
 
 export type JobSeekerModel = Model<IJobSeeker, Record<string, unknown>>;
