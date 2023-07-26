@@ -16,7 +16,16 @@ const createOrganizationZodSchema = z.object({
     .strict(),
 });
 
+const createAdminZodSchema = z.object({
+  body: z
+    .object({
+      email: z.string({ required_error: 'Email is required' }).email(),
+    })
+    .strict(),
+});
+
 export const UserValidation = {
   createJobSeekerZodSchema,
   createOrganizationZodSchema,
+  createAdminZodSchema,
 };

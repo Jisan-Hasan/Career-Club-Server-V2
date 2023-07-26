@@ -35,4 +35,23 @@ const createOrganization: RequestHandler = catchAsync(
   }
 );
 
-export const UserController = { createJobSeeker, createOrganization };
+const createAdmin: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const userData = req.body;
+
+    const result = await UserService.createAdmin(userData);
+
+    sendResponse<IUser>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Admin created Successfully!',
+      data: result,
+    });
+  }
+);
+
+export const UserController = {
+  createJobSeeker,
+  createOrganization,
+  createAdmin,
+};

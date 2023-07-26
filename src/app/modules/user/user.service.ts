@@ -2,6 +2,7 @@ import httpStatus from 'http-status';
 import mongoose from 'mongoose';
 import { ENUM_USER_ROLE } from '../../../enums/user';
 import ApiError from '../../../errors/ApiError';
+import { Admin } from '../admin/admin.model';
 import { JobSeeker } from '../jobSeeker/jobSeeker.model';
 import { Organization } from '../organization/organization.model';
 import { IUser } from './user.interface';
@@ -59,18 +60,18 @@ const createOrganization = async (user: IUser): Promise<IUser | null> => {
   try {
     session.startTransaction();
     // create job seeker
-    const newOrganization = await Organization.create([organization], {
+    const newAdmin = await Organization.create([organization], {
       session,
     });
 
-    if (!newOrganization.length) {
+    if (!newAdmin.length) {
       throw new ApiError(
         httpStatus.BAD_REQUEST,
         'Failed to create Organization'
       );
     }
 
-    user.organization = newOrganization[0]._id;
+    user.organization = newAdmin[0]._id;
     // create user
     const newUser = await User.create([user], { session });
     if (!newUser.length) {
@@ -96,4 +97,50 @@ const createOrganization = async (user: IUser): Promise<IUser | null> => {
   return newUserAllData;
 };
 
-export const UserService = { createJobSeeker, createOrganization };
+const createAdmin = async (user: IUser): Promise<IUser | null> => {
+  const admin = { ...user };
+  // set Role
+  user.role = ENUM_USER_ROLE.ADMIN;
+  // set needs profile update false
+  user.needsProfileUpdate = false;
+
+  let newUserAllData = null;
+  const session = await mongoose.startSession();
+  try {
+    session.startTransaction();
+    // create job seeker
+    const newAdmin = await Admin.create([admin], {
+      session,
+    });
+
+    if (!newAdmin.length) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create Admin');
+    }
+
+    user.admin = newAdmin[0]._id;
+    // create user
+    const newUser = await User.create([user], { session });
+    if (!newUser.length) {
+      throw new ApiError(httpStatus.BAD_REQUEST, 'Failed to create user');
+    }
+
+    newUserAllData = newUser[0];
+
+    await session.commitTransaction();
+    await session.endSession();
+  } catch (error) {
+    await session.abortTransaction();
+    await session.endSession();
+    throw error;
+  }
+
+  if (newUserAllData) {
+    newUserAllData = await User.findOne({
+      email: newUserAllData.email,
+    }).populate('admin');
+  }
+
+  return newUserAllData;
+};
+
+export const UserService = { createJobSeeker, createOrganization, createAdmin };

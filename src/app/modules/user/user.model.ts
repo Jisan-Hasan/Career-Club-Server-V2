@@ -15,9 +15,6 @@ const UserSchema = new Schema<IUser, UserModel>(
       type: Boolean,
       default: true,
     },
-    profileUpdatedAt: {
-      type: Date,
-    },
     jobSeeker: {
       type: Schema.Types.ObjectId,
       ref: 'JobSeeker',
@@ -25,6 +22,10 @@ const UserSchema = new Schema<IUser, UserModel>(
     organization: {
       type: Schema.Types.ObjectId,
       ref: 'Organization',
+    },
+    admin: {
+      type: Schema.Types.ObjectId,
+      ref: 'Admin',
     },
   },
   {

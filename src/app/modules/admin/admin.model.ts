@@ -3,7 +3,7 @@ import { AdminModel, IAdmin } from './admin.interface';
 
 export const AdminSchema = new Schema<IAdmin, AdminModel>(
   {
-    email: { type: String, unique: true, required: true },
+    email: { type: String, required: true, unique: true },
     name: { type: String },
   },
   {
