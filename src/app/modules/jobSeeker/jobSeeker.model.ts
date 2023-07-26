@@ -21,7 +21,7 @@ const SocialMediaSchema = new Schema({
 export const JobSeekerSchema = new Schema<IJobSeeker, JobModel>(
   {
     name: { type: UserNameSchema },
-    email: { type: String, required: true },
+    email: { type: String, required: true, unique: true },
     gender: { type: String, enum: gender },
     bio: { type: String },
     presentAddress: { type: String },
