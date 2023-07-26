@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
 
-export type ICompany = {
+export type IOrganization = {
   email: string;
   name?: string;
   industry?: string;
@@ -12,9 +12,9 @@ export type ICompany = {
   details?: string;
 };
 
-export type CompanyModel = Model<ICompany, Record<string, unknown>>;
+export type OrganizationModel = Model<IOrganization, Record<string, unknown>>;
 
-export type ICompanyFilters = {
+export type IOrganizationFilters = {
   searchTerm?: string;
   email?: string;
   name?: string;

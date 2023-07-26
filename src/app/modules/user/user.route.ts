@@ -11,4 +11,10 @@ router.post(
   UserController.createJobSeeker
 );
 
+router.post(
+  '/create-organization',
+  validateRequest(UserValidation.createOrganizationZodSchema),
+  UserController.createOrganization
+);
+
 export const UserRoutes = router;

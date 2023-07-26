@@ -22,6 +22,10 @@ const UserSchema = new Schema<IUser, UserModel>(
       type: Schema.Types.ObjectId,
       ref: 'JobSeeker',
     },
+    organization: {
+      type: Schema.Types.ObjectId,
+      ref: 'Organization',
+    },
   },
   {
     timestamps: true,

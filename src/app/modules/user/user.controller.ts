@@ -20,4 +20,19 @@ const createJobSeeker: RequestHandler = catchAsync(
   }
 );
 
-export const UserController = { createJobSeeker };
+const createOrganization: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const userData = req.body;
+
+    const result = await UserService.createOrganization(userData);
+
+    sendResponse<IUser>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'Organization created Successfully!',
+      data: result,
+    });
+  }
+);
+
+export const UserController = { createJobSeeker, createOrganization };

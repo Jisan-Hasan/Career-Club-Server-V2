@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-const updateCompanyZodSchema = z.object({
+const updateOrganizationZodSchema = z.object({
   body: z
     .object({
       name: z.string().optional(),
@@ -15,6 +15,6 @@ const updateCompanyZodSchema = z.object({
     .strict(),
 });
 
-export const CompanyValidation = {
-  updateCompanyZodSchema,
+export const OrganizationValidation = {
+  updateOrganizationZodSchema,
 };

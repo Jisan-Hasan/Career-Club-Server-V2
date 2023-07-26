@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
-import { CompanyModel, ICompany } from './company.interface';
+import { IOrganization, OrganizationModel } from './organization.interface';
 
-export const CompanySchema = new Schema<ICompany, CompanyModel>(
+export const OrganizationSchema = new Schema<IOrganization, OrganizationModel>(
   {
     email: { type: String, unique: true, required: true },
     name: { type: String },
@@ -21,4 +21,7 @@ export const CompanySchema = new Schema<ICompany, CompanyModel>(
   }
 );
 
-export const Company = model<ICompany, CompanyModel>('Company', CompanySchema);
+export const Organization = model<IOrganization, OrganizationModel>(
+  'Organization',
+  OrganizationSchema
+);
