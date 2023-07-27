@@ -36,4 +36,8 @@ const UserSchema = new Schema<IUser, UserModel>(
   }
 );
 
+UserSchema.statics.isUserExist = async function (email:string):Promise<IUser | null> {
+  return await User.findOne({email},{email: 1, role: 1, needsProfileUpdate: 1})
+}
+
 export const User = model<IUser, UserModel>('User', UserSchema);

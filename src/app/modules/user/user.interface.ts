@@ -13,4 +13,10 @@ export type IUser = {
   admin?: Types.ObjectId | IAdmin;
 };
 
-export type UserModel = Model<IUser, Record<string, unknown>>;
+// export type UserModel = Model<IUser, Record<string, unknown>>;
+
+export type UserModel = {
+  isUserExist(
+    email: string
+  ): Promise<Pick<IUser, 'email' | 'role' | 'needsProfileUpdate'>>;
+} & Model<IUser>;

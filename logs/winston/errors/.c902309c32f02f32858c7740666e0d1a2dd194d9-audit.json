@@ -1,100 +1,105 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\.c902309c32f02f32858c7740666e0d1a2dd194d9-audit.json",
-  "files": [
-    {
-      "date": 1689661324604,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-12-error.log",
-      "hash": "be948a2a96f62d1a423e4c4cd38bf763381a672f49c4cb1572beb949ca1ae283"
+    "keep": {
+        "days": true,
+        "amount": 14
     },
-    {
-      "date": 1689664951557,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-13-error.log",
-      "hash": "a82f83337ec6dfae2c825c2dc082e683fa04a6b70445b174dd15b181fd7930e8"
-    },
-    {
-      "date": 1689667200757,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-14-error.log",
-      "hash": "a6661a74a88e6899c9e94ebab6860f15c9d6a27cba28e5fde4899574c1bc6114"
-    },
-    {
-      "date": 1689677519298,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-16-error.log",
-      "hash": "ce8069870120996bc9646aef05548f4194ca56fa46070aa301656fd79a8b099b"
-    },
-    {
-      "date": 1689678068400,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-17-error.log",
-      "hash": "d155bb1decdc14e7f8be5015738229e9cf63b49b912768145713ccb74be54bdb"
-    },
-    {
-      "date": 1689681704442,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-18-error.log",
-      "hash": "4ac431cf4ba894a6fddc0914d164fa72c377916902061d0db4730b4120c37274"
-    },
-    {
-      "date": 1689754284136,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-14-error.log",
-      "hash": "1db08719fc658a57cefa70feaa5c641612be2a3dc7a1fd5e8eb10b3897c1ca1d"
-    },
-    {
-      "date": 1689765812831,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-17-error.log",
-      "hash": "f8d65907dbfa256acda54bc076462ee773d1aec5ea6e9cf3b3b0905a19fa07fc"
-    },
-    {
-      "date": 1689768003033,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-18-error.log",
-      "hash": "893cf90743d3cf2b6a9b00efde1ec7f30942e339ad3aff14f712a724b5161af5"
-    },
-    {
-      "date": 1689772696850,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-19-error.log",
-      "hash": "937c21c04384687c91cfabdf072db092d6262b3fce850f5652999c1efb4d6db9"
-    },
-    {
-      "date": 1689786094664,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-23-error.log",
-      "hash": "401893fe430cedf9218f08766ae1feb096bed4b5b837f00a7b86a0764b2c7f47"
-    },
-    {
-      "date": 1689833760543,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-20-12-error.log",
-      "hash": "352163e9cbcc2378a5b719590dd54c5664e427bb45613e2fc2c44002e05f1982"
-    },
-    {
-      "date": 1690368493545,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-16-error.log",
-      "hash": "e9e2dbcdd5e57458a9842493ed2675c090a6c124104c3e62501b852ad3d42d81"
-    },
-    {
-      "date": 1690379263859,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-19-error.log",
-      "hash": "ae701754a9c93cf4a5c7c80b202b3ad448eaee1259894e053a07110aa9dd4010"
-    },
-    {
-      "date": 1690380514062,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-20-error.log",
-      "hash": "dfdb5f28042c3f356423d6e15ba89a1167a83772b76fff53ea169d7f746b75e4"
-    },
-    {
-      "date": 1690392942917,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-23-error.log",
-      "hash": "da60afbc012dfc7fc472604ab9d576c978394411a1bf9d03614518772b08ea4e"
-    },
-    {
-      "date": 1690394824712,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-27-00-error.log",
-      "hash": "f6c4c48748e43be4f980995320217d85bc241d77676a645118144fd78dadcfff"
-    },
-    {
-      "date": 1690401943958,
-      "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-27-02-error.log",
-      "hash": "ec63af171ecb55f77c2b5ca9d7e8a384c8b6cca17703a49deb0a66032b21deac"
-    }
-  ],
-  "hashType": "sha256"
+    "auditLog": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\.c902309c32f02f32858c7740666e0d1a2dd194d9-audit.json",
+    "files": [
+        {
+            "date": 1689661324604,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-12-error.log",
+            "hash": "be948a2a96f62d1a423e4c4cd38bf763381a672f49c4cb1572beb949ca1ae283"
+        },
+        {
+            "date": 1689664951557,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-13-error.log",
+            "hash": "a82f83337ec6dfae2c825c2dc082e683fa04a6b70445b174dd15b181fd7930e8"
+        },
+        {
+            "date": 1689667200757,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-14-error.log",
+            "hash": "a6661a74a88e6899c9e94ebab6860f15c9d6a27cba28e5fde4899574c1bc6114"
+        },
+        {
+            "date": 1689677519298,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-16-error.log",
+            "hash": "ce8069870120996bc9646aef05548f4194ca56fa46070aa301656fd79a8b099b"
+        },
+        {
+            "date": 1689678068400,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-17-error.log",
+            "hash": "d155bb1decdc14e7f8be5015738229e9cf63b49b912768145713ccb74be54bdb"
+        },
+        {
+            "date": 1689681704442,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-18-18-error.log",
+            "hash": "4ac431cf4ba894a6fddc0914d164fa72c377916902061d0db4730b4120c37274"
+        },
+        {
+            "date": 1689754284136,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-14-error.log",
+            "hash": "1db08719fc658a57cefa70feaa5c641612be2a3dc7a1fd5e8eb10b3897c1ca1d"
+        },
+        {
+            "date": 1689765812831,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-17-error.log",
+            "hash": "f8d65907dbfa256acda54bc076462ee773d1aec5ea6e9cf3b3b0905a19fa07fc"
+        },
+        {
+            "date": 1689768003033,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-18-error.log",
+            "hash": "893cf90743d3cf2b6a9b00efde1ec7f30942e339ad3aff14f712a724b5161af5"
+        },
+        {
+            "date": 1689772696850,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-19-error.log",
+            "hash": "937c21c04384687c91cfabdf072db092d6262b3fce850f5652999c1efb4d6db9"
+        },
+        {
+            "date": 1689786094664,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-19-23-error.log",
+            "hash": "401893fe430cedf9218f08766ae1feb096bed4b5b837f00a7b86a0764b2c7f47"
+        },
+        {
+            "date": 1689833760543,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-20-12-error.log",
+            "hash": "352163e9cbcc2378a5b719590dd54c5664e427bb45613e2fc2c44002e05f1982"
+        },
+        {
+            "date": 1690368493545,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-16-error.log",
+            "hash": "e9e2dbcdd5e57458a9842493ed2675c090a6c124104c3e62501b852ad3d42d81"
+        },
+        {
+            "date": 1690379263859,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-19-error.log",
+            "hash": "ae701754a9c93cf4a5c7c80b202b3ad448eaee1259894e053a07110aa9dd4010"
+        },
+        {
+            "date": 1690380514062,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-20-error.log",
+            "hash": "dfdb5f28042c3f356423d6e15ba89a1167a83772b76fff53ea169d7f746b75e4"
+        },
+        {
+            "date": 1690392942917,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-26-23-error.log",
+            "hash": "da60afbc012dfc7fc472604ab9d576c978394411a1bf9d03614518772b08ea4e"
+        },
+        {
+            "date": 1690394824712,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-27-00-error.log",
+            "hash": "f6c4c48748e43be4f980995320217d85bc241d77676a645118144fd78dadcfff"
+        },
+        {
+            "date": 1690401943958,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-27-02-error.log",
+            "hash": "ec63af171ecb55f77c2b5ca9d7e8a384c8b6cca17703a49deb0a66032b21deac"
+        },
+        {
+            "date": 1690441823816,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-27-13-error.log",
+            "hash": "60938779ac6e33bd14a0133aeb33fbac3b256d20383bd6a6535d2393a4eace51"
+        }
+    ],
+    "hashType": "sha256"
 }
