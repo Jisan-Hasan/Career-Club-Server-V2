@@ -12,6 +12,7 @@ export const OrganizationSchema = new Schema<IOrganization, OrganizationModel>(
     website: { type: String },
     phone: { type: String },
     details: { type: String },
+    image: { type: String },
   },
   {
     timestamps: true,

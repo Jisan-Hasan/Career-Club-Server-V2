@@ -143,4 +143,14 @@ const createAdmin = async (user: IUser): Promise<IUser | null> => {
   return newUserAllData;
 };
 
-export const UserService = { createJobSeeker, createOrganization, createAdmin };
+const getUserRole = async (email: string) => {
+  const result = await User.findOne({ email: email }, { role: 1 });
+  return result;
+};
+
+export const UserService = {
+  createJobSeeker,
+  createOrganization,
+  createAdmin,
+  getUserRole,
+};

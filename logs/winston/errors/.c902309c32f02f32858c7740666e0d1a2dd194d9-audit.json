@@ -99,6 +99,41 @@
             "date": 1690441823816,
             "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-27-13-error.log",
             "hash": "60938779ac6e33bd14a0133aeb33fbac3b256d20383bd6a6535d2393a4eace51"
+        },
+        {
+            "date": 1690477360309,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-27-23-error.log",
+            "hash": "90959d97680527ea27e30ca3e1a7a8f98e2f1c6755e26007f58b305931e1672d"
+        },
+        {
+            "date": 1690482262680,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-28-00-error.log",
+            "hash": "688b1dca985b6eebbbf397c8be2c5716d02157e0e8f0fcbdbc2333d27308ecb7"
+        },
+        {
+            "date": 1690485194732,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-28-01-error.log",
+            "hash": "26615945286853704029135c1b9feed57fc232329c62c7e9d75a868c1c112891"
+        },
+        {
+            "date": 1690620589074,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-29-14-error.log",
+            "hash": "108695fd97f7fdecd68422ff02a2ebb4c3701eeb9d865abd8bc8f60fa9914eab"
+        },
+        {
+            "date": 1690621487681,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-29-15-error.log",
+            "hash": "caf7aec146ad8da2caeed16b2cb51b1eb2e496e0c93d67657909ff94db8edc14"
+        },
+        {
+            "date": 1690627103920,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-29-16-error.log",
+            "hash": "89e2024d01671b0a71461b1f0697f01466115515a2e123daa912ffcd5f293790"
+        },
+        {
+            "date": 1690628420828,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\errors\\CC-2023-07-29-17-error.log",
+            "hash": "293ddc4750a95362fae721729f5c4b13952cbbc06c2c82344a63ff645c5dd6bf"
         }
     ],
     "hashType": "sha256"

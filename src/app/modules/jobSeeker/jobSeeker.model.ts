@@ -4,11 +4,6 @@ import { gender } from './jobSeeker.constant';
 import { IJobSeeker, JobSeekerModel } from './jobSeeker.interface';
 
 // Define the UserName schema
-const UserNameSchema = new Schema({
-  firstName: { type: String },
-  middleName: { type: String },
-  lastName: { type: String },
-});
 
 // Define the SocialMedia schema
 const SocialMediaSchema = new Schema({
@@ -20,7 +15,7 @@ const SocialMediaSchema = new Schema({
 
 export const JobSeekerSchema = new Schema<IJobSeeker, JobModel>(
   {
-    name: { type: UserNameSchema },
+    name: { type: String },
     email: { type: String, required: true, unique: true },
     gender: { type: String, enum: gender },
     bio: { type: String },
@@ -32,7 +27,7 @@ export const JobSeekerSchema = new Schema<IJobSeeker, JobModel>(
     emergencyContactNo: { type: String },
     socialMediaLink: { type: SocialMediaSchema },
     resume: { type: String },
-    profileImage: { type: String },
+    image: { type: String },
     skills: [{ type: String }],
   },
   {

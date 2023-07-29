@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "I:\\Advance Development\\career-club-server\\logs\\winston\\user\\.3d43b4eb7b99212187a540d229cccbe58f2b6fa8-audit.json",
+    "files": [
+        {
+            "date": 1690628821170,
+            "name": "I:\\Advance Development\\career-club-server\\logs\\winston\\user\\CC-2023-07-29-17-activity.log",
+            "hash": "3dbb68c254ccbf0dd493277fd2f242a9d7f79cc6944e56ef28016c14fc704880"
+        }
+    ],
+    "hashType": "sha256"
+}

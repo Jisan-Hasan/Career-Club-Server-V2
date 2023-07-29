@@ -34,7 +34,7 @@ const logger = createLogger({
       datePattern: 'YYYY-MM-DD-HH',
       zippedArchive: true,
       maxSize: '20m',
-      maxFiles: '2d',
+      maxFiles: '14d',
     }),
   ],
 });
@@ -67,4 +67,33 @@ const errorLogger = createLogger({
   ],
 });
 
-export { errorLogger, logger };
+// request logger
+const userActivityLogger = createLogger({
+  level: 'info',
+  format: combine(
+    label({ label: 'Info' }),
+    timestamp(),
+    myFormat,
+    prettyPrint()
+  ),
+  defaultMeta: { service: 'user-service' },
+  transports: [
+    new transports.Console(),
+
+    new DailyRotateFile({
+      filename: path.join(
+        process.cwd(),
+        'logs',
+        'winston',
+        'user',
+        'CC-%DATE%-activity.log'
+      ),
+      datePattern: 'YYYY-MM-DD-HH',
+      zippedArchive: true,
+      maxSize: '20m',
+      maxFiles: '14d',
+    }),
+  ],
+});
+
+export { errorLogger, logger, userActivityLogger };

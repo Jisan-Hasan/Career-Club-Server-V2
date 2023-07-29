@@ -8,6 +8,7 @@ import { UserService } from './user.service';
 const createJobSeeker: RequestHandler = catchAsync(
   async (req: Request, res: Response) => {
     const userData = req.body;
+    console.log(userData);
 
     const result = await UserService.createJobSeeker(userData);
 
@@ -49,9 +50,23 @@ const createAdmin: RequestHandler = catchAsync(
     });
   }
 );
+const getUserRole: RequestHandler = catchAsync(
+  async (req: Request, res: Response) => {
+    const {email} = req.params;
+    const result = await UserService.getUserRole(email);
+
+    sendResponse<Partial<IUser>>(res, {
+      statusCode: httpStatus.OK,
+      success: true,
+      message: 'User role retrived Successfully!',
+      data: result,
+    });
+  }
+);
 
 export const UserController = {
   createJobSeeker,
   createOrganization,
   createAdmin,
+  getUserRole,
 };

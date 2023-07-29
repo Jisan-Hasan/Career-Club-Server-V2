@@ -1,0 +1,22 @@
+{
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5000,
+  level: 'error',
+  service: 'user-service',
+  label: 'Error',
+  timestamp: '2023-07-29T08:49:52.416Z'
+}
+{
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5000,
+  level: 'error',
+  service: 'user-service',
+  label: 'Error',
+  timestamp: '2023-07-29T08:50:55.442Z'
+}

@@ -10,6 +10,7 @@ export type IOrganization = {
   website?: string;
   phone?: string;
   details?: string;
+  image?:string;
 };
 
 export type OrganizationModel = Model<IOrganization, Record<string, unknown>>;

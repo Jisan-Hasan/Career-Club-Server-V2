@@ -1,0 +1,35 @@
+{
+  message: 'IP: ::1, Path:/api/v1/job/64b7c85ee5dec275ea966a2c',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:07:10.751Z'
+}
+{
+  message: 'IP: ::1, Path:/api/v1/job/',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:07:12.567Z'
+}
+{
+  message: 'IP: ::1, Path:/api/v1/auth/get-token',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:07:23.940Z'
+}
+{
+  message: 'IP: ::1, Path:/api/v1/job/64b7c85ee5dec275ea966a2c',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:07:31.044Z'
+}
+{
+  message: 'IP: ::1, Path:/api/v1/payment/',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:07:33.215Z'
+}

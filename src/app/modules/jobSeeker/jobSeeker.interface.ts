@@ -1,11 +1,5 @@
 import { Model } from 'mongoose';
 
-export type UserName = {
-  firstName?: string;
-  middleName?: string;
-  lastName?: string;
-};
-
 export type SocialMedia = {
   facebook?: string;
   github?: string;
@@ -14,7 +8,7 @@ export type SocialMedia = {
 };
 
 export type IJobSeeker = {
-  name?: UserName;
+  name?: string;
   email: string;
   gender?: 'male' | 'female';
   bio?: string;
@@ -26,7 +20,7 @@ export type IJobSeeker = {
   emergencyContactNo?: string;
   socialMediaLink?: SocialMedia;
   resume?: string;
-  profileImage?: string;
+  image?: string;
   skills?: string[];
 };
 

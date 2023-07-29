@@ -4,13 +4,7 @@ import { gender } from './jobSeeker.constant';
 const updateJobSeekerZodSchema = z.object({
   body: z
     .object({
-      name: z
-        .object({
-          firstName: z.string().optional(),
-          middleName: z.string().optional(),
-          lastName: z.string().optional(),
-        })
-        .optional(),
+      name: z.string().optional(),
       gender: z.enum([...gender] as [string, ...string[]]).optional(),
       bio: z.string().optional(),
       presentAddress: z.string().optional(),
@@ -28,7 +22,7 @@ const updateJobSeekerZodSchema = z.object({
         })
         .optional(),
       resume: z.string().optional(),
-      profileImage: z.string().optional(),
+      image: z.string().optional(),
       skills: z.array(z.string()).optional(),
     })
     .strict(),

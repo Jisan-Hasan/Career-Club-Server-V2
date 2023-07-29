@@ -4,6 +4,8 @@ const createJobSeekerZodSchema = z.object({
   body: z
     .object({
       email: z.string({ required_error: 'Email is required' }).email(),
+      image: z.string().url().optional(),
+      name: z.string().optional(),
     })
     .strict(),
 });
@@ -12,6 +14,8 @@ const createOrganizationZodSchema = z.object({
   body: z
     .object({
       email: z.string({ required_error: 'Email is required' }).email(),
+      image: z.string().url().optional(),
+      name: z.string().optional(),
     })
     .strict(),
 });

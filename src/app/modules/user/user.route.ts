@@ -23,4 +23,6 @@ router.post(
   UserController.createAdmin
 );
 
+router.get('/role/:email', UserController.getUserRole);
+
 export const UserRoutes = router;

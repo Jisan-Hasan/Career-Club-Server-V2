@@ -11,6 +11,7 @@ const updateOrganizationZodSchema = z.object({
       website: z.string().optional(),
       phone: z.string().optional(),
       details: z.string().optional(),
+      image: z.string().optional(),
     })
     .strict(),
 });
