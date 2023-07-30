@@ -33,3 +33,395 @@
   label: 'Info',
   timestamp: '2023-07-29T11:07:33.215Z'
 }
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:23.879Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:23.889Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:29.444Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:29.448Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:30.611Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:30.613Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:30.911Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:30.913Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:31.065Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:31.069Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:31.223Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:31.225Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:31.381Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:40:31.384Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:07.586Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:07.590Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:09.765Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:09.767Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:10.608Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:10.610Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:11.354Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:11.356Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:11.738Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:11.740Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:11.909Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:11.911Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:12.954Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:12.956Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:31.369Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:31.371Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:32.215Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:32.217Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:33.354Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:33.360Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:34.070Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:34.071Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:35.600Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:35.601Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:41.044Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:41.047Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:43.477Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:43.479Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:51.831Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:41:51.834Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:01.874Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:01.879Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:21.960Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:21.962Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:23.378Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:23.380Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:26.161Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:26.163Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:41.722Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:42:41.724Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredCategories',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:43:57.235Z'
+}
+{
+  message: 'IP: ::1, Path:/featuredProducts',
+  level: 'info',
+  service: 'user-service',
+  label: 'Info',
+  timestamp: '2023-07-29T11:43:57.238Z'
+}
